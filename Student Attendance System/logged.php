@@ -12,13 +12,14 @@
     </head>
     <body>
         <?php
+			include 'webHelper.php';
             session_start();
             if(isset($_SESSION['name']) && isset($_SESSION['code']))
             {
                 $name=$_SESSION['name'];
                 $code=$_SESSION['code'];
-                
-                $period=6;//read from database;
+                $database=new Database();
+                $period= $database->fetchTeacher($name,$code);
         ?>
         <div class="container">
             <div class="row">
@@ -50,7 +51,37 @@
                         <button class="btn-normal">Search</button>
                     </div>
                     </form>
-                </div>
+				</div>
+				<div class="col-md-8 offset-2">
+					<?php
+						if(isset($_GET['sname']) && isset($_GET['speriod']))
+						{
+							echo "<hr>";
+							$sname=$_GET['sname'];
+							$speriod=$_GET['speriod'];
+							$percent=ceil($speriod/$period*100);
+							if($percent<70)
+							{
+								$stat="NQ";
+							}
+							else
+							{
+								$stat="Qualified";
+							}
+							echo "<div class='text-center'>".$sname."&nbsp; &nbsp; &nbsp; &nbsp;".$percent."% (".$stat.")</div>";
+						echo "<hr>";
+						}
+						else if(isset($_GET['err']))
+						{
+							if($_GET['err']==-1){
+								echo '<hr><div class="col-md-12 text-center">Error data</div><hr>';
+							}
+							else if($_GET['err']==-2){
+								echo '<hr><div class="col-md-12 text-center">Student Not Found</div><hr>';
+							}
+						}
+					?>
+				</div>
                 <div class="col-md-12 text-center">
                     <form action="logout.php">
                     <button class="btn-normal">Logout</button>

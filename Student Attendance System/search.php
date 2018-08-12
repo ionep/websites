@@ -1,24 +1,29 @@
 <?php
+	include 'webHelper.php';
     session_start();
     if(isset($_SESSION["name"]) && isset($_SESSION["code"]))
     {
         if(isset($_POST['id']))
         {
             $id= htmlentities($_POST['id']);
-            $id= htmlentities($_POST['code']);
+            $code= htmlentities($_POST['code']);
             
-            if($id=="1010")//validate
+            $database=new Database();
+            
+            $data=$database->fetchStudent($id,$code);
+            if($data==-1)
             {
-                //read from db
-                $name="Ram";
-                $period=2;
-                
-                header("Location:logged.php?name=".$name."&period=".$period);
-            }
-            else
-            {
-                
-            }
+				header("Location:logged.php?err=-2");
+			}
+			else
+			{
+				$name=$data[0];
+				$period=$data[1];
+				header("Location:logged.php?sname=".$name."&speriod=".$period);
+			}
         }
+        else{
+			header("Location:logged.php?err=-1");
+		}
     }
 ?>

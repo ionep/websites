@@ -1,4 +1,5 @@
 <?php
+	include 'webHelper.php';
     session_start();
     if(isset($_SESSION["name"]) && isset($_SESSION["code"]))
     {
@@ -6,11 +7,12 @@
     }
     else
     {
+		$database=new Database();
         if(isset($_POST))
         {
             $name= htmlentities($_POST['name']);
             $code= htmlentities($_POST['code']);
-            if($name=="Kamal Gautam" && $code=="0000")//verify database
+            if($database->fetchTeacher($name,$code))//verify database
             {
                 session_start();
                 $_SESSION['name']=$name;
