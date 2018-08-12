@@ -1,0 +1,8 @@
+header {
+    padding: 0px 50px 200px 50px;
+    margin-bottom: 50px; 
+    position: relative;
+    z-index: 1;
+    background: url("../assets/img1.jpg");
+    background-size: cover;
+}

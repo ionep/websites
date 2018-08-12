@@ -1,0 +1,92 @@
+header {
+    padding: 0px 50px 50px 50px;
+    margin-bottom: 50px; 
+    position: relative;
+    background-size: cover;
+    z-index: 1;
+    background-image: url(../assets/img1.jpg);
+}
+header .profile{
+    margin-top: 50px;
+}
+
+.profile-image{
+    margin-top: 50px;
+}
+
+.profile img{
+    width: 250px;
+    height: 250px;
+}
+
+/* style of the information */
+header .info{
+    color: white;
+}
+
+header .info h2{
+    font-size: 50px;
+}
+
+header .info h4{
+    color: orange;
+    font-size: 30px;
+}
+
+header .info li{
+    font-size: 20px;
+}
+
+header .info b{
+    color: orange;
+    font-weight: bolder;
+}
+
+/* icons initial style */
+header .fa-stack-2x{
+	color: blue;
+}
+
+header .fa-stack-1x{
+	color: white;
+}
+
+/* hover on icon change their color */
+header a>.fa-stack:hover .fa-stack-2x{
+    color: #c0ffc0; 
+}
+header a>.fa-stack:hover .fa-stack-1x{
+    color: black; 
+}
+
+/* icon on the same line*/
+header ul .list-icons{
+    display:inline-block;
+}
+
+.navbar-header{
+	text-align : right;
+}
+
+#about{
+    margin: 20px 0px 30px 0px;
+}
+
+#about h2{
+    display: inline-block;  
+    padding-top: 20px;
+    font-size: 40px;
+    font-weight: bolder;
+    margin-top : 0px;
+    border-top: 10px solid orange;   
+    border-radius: 4px;
+}
+
+#about span{
+    font-size: 18px;
+    font-weight: bold;
+}
+#about p{
+    font-size: 20px;
+    padding-top: 30px;
+}

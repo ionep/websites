@@ -1,0 +1,71 @@
+body{
+    font-family: 'Montserrat',sans-serif;
+    font-size: 15px;
+}
+header{
+    margin-bottom: 100px;
+}
+header .navbar{
+    padding: 30px;  
+    background-color: #1f61db;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+header nav .navbar-toggle{
+    background: black;
+}
+header nav .navbar-toggle .icon-bar{
+    background: white;
+}
+header nav a{
+    color: white;
+}
+header .navbar-brand{
+    font-size: 50px;
+    font-weight: 700;
+}
+#slides{
+    margin-bottom: 20px;
+}
+#features{
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+#features .pglni{
+    margin: 0px 5px 0px 5px;
+}
+#features h2{
+    color: #1f61db;
+    font-size: 25px;
+    font-weight: 700;
+}
+#features i{
+    font-size: 60px;
+    color:#1f61db;
+}
+#info{
+    background: #1f61db;
+    color: white;
+    padding: 0px 10px 10px 0px;
+}
+#info .pglni{
+    margin: 0px 10px 20px 0px;
+}
+#info img{
+    width: 100%;
+    height: 100%;
+}
+#info h1{
+    font-weight: 700;
+    font-size: 60px;
+}
+#info h2{
+    margin-top: 5px;
+    font-size: 40px;
+    font-weight:600;
+}
+#info p,#info ul{
+    margin: 10px;
+    font-size: 20px;
+}
