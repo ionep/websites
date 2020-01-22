@@ -2,7 +2,7 @@
 	class Database
 	{
 		private $dbUser='foreverr_admin';
-		private $dbPass='tnipib147';
+		private $dbPass='randompass';
 		private $host='mysql:dbname=foreverr_main;host=localhost';
 		//private $dbUser='root';
 		//private $dbPass='';
